@@ -1,9 +1,17 @@
 const express = require("express");
 const dotEnv = require("dotenv");
 
+import {
+    BootCampsRoutes
+} from "../routes"
+
 const app = express()
 
-dotEnv.config({ path: "./config/config.env" })
+app.use(logger)
+
+app.use('/api/v1/bootcamps', BootCampsRoutes)
+
+dotEnv.config({ path: "../config/config.env" })
 
 const PORT = process.env.PORT || 5000
 

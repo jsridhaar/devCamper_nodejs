@@ -1,0 +1,1 @@
+export const BootCampsRoutes = require("./bootcamps")

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prod" : "NODE_ENV=production node server",
-    "dev" : "nodemon server"
+    "prod": "NODE_ENV=production node ./src/server",
+    "dev": "nodemon --exec babel-node  ./src/server"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,9 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
     "nodemon": "^1.19.4"
   }
 }
