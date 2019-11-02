@@ -1,11 +1,12 @@
-const Express = require('express')
+import Express from "express"
 const Router = Express.Router()
 
 import {
     GetBootCamps,
     PostBootCamps,
     UpdateBootCamps,
-    DeleteBootCamps
+    DeleteBootCamps,
+    GetBootCampsById
 } from "../controllers/bootcamps"
 
 Router
@@ -15,6 +16,7 @@ Router
 
 Router
     .route('/:id')
+    .get(GetBootCampsById)
     .put(UpdateBootCamps)
     .delete(DeleteBootCamps)
 
